@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Measured ablation results: change in validation bits per byte versus baseline for eight configurations">
+  <rect width="640" height="360" fill="#22262D"/>
+  <g font-family="IBM Plex Mono, monospace">
+    <text x="24" y="30" font-size="13" fill="#EDEFF2" letter-spacing="2">PARAMETER GOLF / SPRINT 002 ABLATION MATRIX</text>
+    <text x="24" y="48" font-size="10" fill="#8BD920" letter-spacing="1">MEASURED / N=27 (9 CONFIGS x 3 SEEDS) / 600S WALLCLOCK / 16MB CAP</text>
+
+    <line x1="180" y1="64" x2="180" y2="298" stroke="#EDEFF2" stroke-opacity="0.35"/>
+    <text x="180" y="312" font-size="9" fill="#9BA1AA" text-anchor="middle">0</text>
+    <text x="120" y="312" font-size="9" fill="#9BA1AA" text-anchor="middle">&#8592; BETTER</text>
+    <text x="260" y="312" font-size="9" fill="#9BA1AA" text-anchor="middle">WORSE &#8594;</text>
+
+    <g font-size="10">
+      <text x="24" y="82" fill="#9BA1AA">A1 NO QUANT</text>
+      <rect x="178" y="72" width="2" height="14" fill="#9BA1AA" fill-opacity="0.6"/>
+      <text x="172" y="82" fill="#9BA1AA" text-anchor="end" font-size="9">-0.0018</text>
+
+      <text x="24" y="110" fill="#9BA1AA">A2 PER-TENSOR</text>
+      <rect x="178.5" y="100" width="1.5" height="14" fill="#9BA1AA" fill-opacity="0.6"/>
+      <text x="172" y="110" fill="#9BA1AA" text-anchor="end" font-size="9">-0.0003</text>
+
+      <text x="24" y="138" fill="#EDEFF2">A3 MATH SDPA</text>
+      <rect x="180" y="128" width="57" height="14" fill="#D9A514"/>
+      <text x="243" y="138" fill="#D9A514" font-size="9">+0.0947</text>
+
+      <text x="24" y="166" fill="#EDEFF2">A4 ADAMW</text>
+      <rect x="180" y="156" width="419" height="14" fill="#D9A514"/>
+      <text x="593" y="166" fill="#14170B" text-anchor="end" font-size="9">+0.6984</text>
+
+      <text x="24" y="194" fill="#9BA1AA">A5 FULL MHA</text>
+      <rect x="178" y="184" width="2" height="14" fill="#9BA1AA" fill-opacity="0.6"/>
+      <text x="172" y="194" fill="#9BA1AA" text-anchor="end" font-size="9">-0.0016</text>
+
+      <text x="24" y="222" fill="#8BD920" font-weight="700">A6 UNTIED EMB</text>
+      <rect x="169" y="212" width="11" height="14" fill="#8BD920"/>
+      <text x="163" y="222" fill="#8BD920" text-anchor="end" font-size="9">-0.0187</text>
+      <text x="190" y="222" fill="#8BD920" font-size="9">BEST / &gt;15x NOISE FLOOR / +0.26 MB</text>
+
+      <text x="24" y="250" fill="#EDEFF2">C1 A1+A4</text>
+      <rect x="180" y="240" width="419" height="14" fill="#D9A514" fill-opacity="0.7"/>
+      <text x="593" y="250" fill="#14170B" text-anchor="end" font-size="9">+0.6990</text>
+
+      <text x="24" y="278" fill="#EDEFF2">C2 A5+A4</text>
+      <rect x="180" y="268" width="391" height="14" fill="#D9A514" fill-opacity="0.7"/>
+      <text x="565" y="278" fill="#14170B" text-anchor="end" font-size="9">+0.6523</text>
+    </g>
+
+    <text x="24" y="340" font-size="9" fill="#9BA1AA">&#916; VAL BPB VS B0 BASELINE (LOWER IS BETTER) &#183; SOURCE: results.tsv, BRANCH sprint-002-ablation-study</text>
+  </g>
+</svg>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SturdivantAI Lab / Independent Applied AI Research</title>
+  <meta name="description" content="SturdivantAI Lab builds agentic multi-agent systems, evaluates models in regulated environments, and publishes from production. Findings become prototypes. Prototypes become findings.">
+
+  <!-- Canonical points at the live URL. Swap to https://sturdivant.ai/ only AFTER the domain is registered and attached. -->
+  <link rel="canonical" href="https://sturdivantai-lab.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SturdivantAI Lab">
+  <meta property="og:description" content="Independent applied AI research. Findings become prototypes. Prototypes become findings.">
+  <meta property="og:url" content="https://sturdivantai-lab.vercel.app/">
+  <meta property="og:image" content="https://sturdivantai-lab.vercel.app/assets/og-image.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SturdivantAI Lab">
+  <meta name="twitter:description" content="Independent applied AI research. Findings become prototypes. Prototypes become findings.">
+  <!-- PENDING: <meta name="twitter:site" content="@SturdivantAI"> once handle is confirmed -->
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#about">SKIP TO CONTENT</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ================= NAV ================= -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+          <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></g></svg>
+        </button>
+        <a class="nav-logo" href="#top" aria-label="SturdivantAI Lab home">
+          <!-- Brand mark (SVG rebuild of the official logo). Swap for the production file per README. -->
+          <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <defs>
+              <linearGradient id="sgrad-nav" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9EE022"/>
+                <stop offset="1" stop-color="#4FB31E"/>
+              </linearGradient>
+            </defs>
+            <circle cx="14" cy="14" r="13" fill="#22262D"/>
+            <path d="M18.5 8.6c-5-2.6-9.6-1-9.6 1.8 0 3.4 10.2 2.4 10.2 6 0 2.8-4.6 4.4-9.6 1.8" fill="none" stroke="url(#sgrad-nav)" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="18.5" cy="8.6" r="1.6" fill="#D6F58F"/>
+          </svg>
+          <span class="mono" style="font-weight:500">STURDIVANTAI <span style="color:#8BD920">LAB</span></span>
+        </a>
+      </div>
+      <ul class="nav-tabs" aria-label="Sections">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero wrap" id="top">
+    <p class="hero-kicker">SturdivantAI Lab / Independent Applied AI Research</p>
+    <h1>Findings become prototypes. <em>Prototypes become findings.</em></h1>
+    <p class="hero-sub">
+      SturdivantAI Lab builds agentic multi-agent systems, evaluates models in regulated
+      environments, and publishes from production. Each release is gated by a Large Language
+      Model as a Judge (LLM-as-a-Judge) validation harness before it ships. The work is open
+      where it can be. The standards are high where they must be.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#research">Read the research</a>
+      <a class="btn btn-secondary" href="#contact">Collaborate</a>
+    </div>
+
+    <!-- Signature element: the operating loop -->
+    <figure class="flywheel reveal">
+      <svg viewBox="0 0 460 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="loop-title">
+        <title id="loop-title">Operating loop: research to prototype to hardening to telemetry, cycling back to research</title>
+        <g font-family="IBM Plex Mono, monospace" font-size="12">
+          <!-- the loop -->
+          <circle class="loop-ring" cx="230" cy="240" r="140" fill="none" stroke="#9BA1AA" stroke-dasharray="4 6"/>
+          <!-- clockwise direction markers -->
+          <g fill="#8BD920">
+            <path d="M0,-5 L11,0 L0,5 z" transform="translate(329,141) rotate(45)"/>
+            <path d="M0,-5 L11,0 L0,5 z" transform="translate(329,339) rotate(135)"/>
+            <path d="M0,-5 L11,0 L0,5 z" transform="translate(131,339) rotate(225)"/>
+            <path d="M0,-5 L11,0 L0,5 z" transform="translate(131,141) rotate(315)"/>
+          </g>
+          <!-- stages: N > E > S > W, clockwise -->
+          <rect x="165" y="80" width="130" height="40" rx="8" fill="#E8862E"/>
+          <text x="230" y="104" text-anchor="middle" fill="#14170B" font-weight="500">RESEARCH</text>
+
+          <rect x="308" y="218" width="128" height="44" rx="8" fill="#C7CBD1"/>
+          <text x="372" y="244" text-anchor="middle" fill="#14170B" font-weight="500">PROTOTYPE</text>
+
+          <rect x="152" y="356" width="156" height="52" rx="8" fill="#191C21" stroke="#8BD920"/>
+          <text x="230" y="378" text-anchor="middle" fill="#8BD920">HARDEN</text>
+          <text x="230" y="396" text-anchor="middle" fill="#8BD920" font-size="9">V&amp;V / JUDGE GATE</text>
+
+          <rect x="24" y="218" width="128" height="44" rx="8" fill="#8BD920"/>
+          <text x="88" y="244" text-anchor="middle" fill="#14170B" font-weight="500">TELEMETRY</text>
+
+          <!-- center annotation -->
+          <g fill="#9BA1AA" font-size="10.5" text-anchor="middle">
+            <text x="230" y="212">FAILURE CASES</text>
+            <text x="230" y="228">AND EVAL TRACES</text>
+            <text x="230" y="244">SET THE NEXT</text>
+            <text x="230" y="260">RESEARCH QUESTION</text>
+          </g>
+        </g>
+      </svg>
+    </figure>
+  </header>
+
+  <main>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">01</span> / ABOUT</span><span>FOUNDER-AS-SCIENTIST</span></div>
+      <h2>The lab exists to compress the distance between an algorithm on paper and an algorithm in production.</h2>
+      <div class="section-body">
+        <p>
+          SturdivantAI Lab is the research practice of Edidiong Umoh, Cloud AI Engineer and
+          Master of Research (M.Res) in Artificial Intelligence candidate at Capitol Technology
+          University. Useful methods can take years to migrate from a paper to an operating
+          system that people rely on. The lab treats that lag as its core problem: research
+          findings are reimplemented to production standard, gated behind a Verification and
+          Validation (V&amp;V) pass scored by an LLM-as-a-Judge harness, and shipped. The failure
+          cases and evaluation traces that come back set the next research question.
+        </p>
+        <p>
+          Day to day, that means machine learning and MLOps pipelines, Large Language Model
+          (LLM) tuning, model quantization and compression for edge deployments, open-source
+          model installation and serving, and cloud orchestration across AWS and GCP.
+        </p>
+        <p>
+          Affiliations: IEEE Computer Society, GDG Annapolis, CTU Cyber Lab, Upwardly Global,
+          AWS Nonprofit Community Group.
+        </p>
+      </div>
+      <ul class="axioms">
+        <li><span class="mono">VISION</span><span>An autonomous future where the friction between artificial intelligence theory and production engineering is eliminated: a self-evolving loop of empirical discovery.</span></li>
+        <li><span class="mono">MISSION</span><span>Translate hidden algorithmic breakthroughs into battle-hardened, modular agentic systems. Design rigorous verification and telemetry frameworks that expose deep system edge cases. Feed those empirical insights back to the scientific community through peer-reviewed research.</span></li>
+        <li><span class="mono">AX.01</span><span>Every paper we publish maps to a deployed capability within two quarters. We track paper-to-prototype latency per project and publish it.</span></li>
+        <li><span class="mono">AX.02</span><span>We don't call a prototype done until it survives a production-grade V&amp;V pass. Every release ships with its judge-harness evaluation report.</span></li>
+        <li><span class="mono">AX.03</span><span>Our repositories hold to five practices: structure, automation, repeatability, testability, maintainability. Audit them yourself.</span></li>
+      </ul>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section id="research" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">02</span> / RESEARCH</span><span>ACTIVE PROJECTS</span></div>
+      <h2>Seven systems, one loop.</h2>
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-head">
+            <h3>GhostWrench</h3>
+            <span class="badge badge-dev">In Development</span>
+          </div>
+          <p>An autonomous, safety-gated field engineer agent: multimodal equipment diagnosis, judged procurement, and voice-guided repair. Every action passes a cloud judge before it reaches the field.</p>
+          <div class="card-tech">
+            <span>AWS Bedrock</span><span>Amazon Nova</span><span>LLM-as-a-Judge</span><span>Visual RAG</span><span>Safety gates</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh/GhostWrench-">GITHUB / GhostWrench</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>MoCo Lantern</h3>
+            <span class="badge badge-dev">In Development</span>
+          </div>
+          <p>A multi-agent civic AI system for community decision support, built on judge-gated agent pipelines.</p>
+          <div class="card-tech">
+            <span>Vertex AI</span><span>Gemini</span><span>Agentic MAS</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh/MoCo-Lantern-Sturdivant-AI">GITHUB / MoCo-Lantern</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Parameter Golf</h3>
+            <span class="badge badge-active">Active Research</span>
+          </div>
+          <p>Precision and architecture ablations under hard caps: 600 seconds of wallclock, 16 MB of artifact. Sprint 002's N=27 matrix found that untying token embeddings beats the tied baseline by 0.0187 BPB, over 15&#215; the seed noise floor.</p>
+          <div class="card-tech">
+            <span>INT8 per-row</span><span>Muon</span><span>Ablation matrix</span><span>16 MB cap</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh/parameter-golf">GITHUB / parameter-golf</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>AiRevl</h3>
+            <span class="badge badge-dev">In Development</span>
+          </div>
+          <p>Edge-intelligent agentic systems for transaction environments where connections drop without warning. Built on checkpointed, journaled state machines that recover without duplicate side effects.</p>
+          <div class="card-tech">
+            <span>AWS Bedrock</span><span>Checkpointed state machines</span><span>Offline-first orchestration</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh">GITHUB / DIRECT LINK PENDING</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>AI Governance Sentinel</h3>
+            <span class="badge badge-dev">In Development</span>
+          </div>
+          <p>A multi-agent audit system for AI governance: policy ingestion, target probing, an expert review panel spanning regulatory, ML, and security lenses, and a human checkpoint before any report is finalized.</p>
+          <div class="card-tech">
+            <span>LangGraph</span><span>CrewAI</span><span>HITL orchestration</span><span>FastAPI</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh">GITHUB / DIRECT LINK PENDING</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>AI Governance &amp; Security Research</h3>
+            <span class="badge badge-active">Active Research</span>
+          </div>
+          <p>Security and governance research on agentic AI systems: threat framings, evaluation methods, and the audit evidence a regulated deployment has to produce.</p>
+          <div class="card-tech">
+            <span>Agentic AI security</span><span>Governance frameworks</span><span>Red-team evaluation</span>
+          </div>
+          <a class="card-link" href="https://github.com/edidiongumoh/ai_governance_security_research">GITHUB / ai_governance_security_research</a>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3>eCommerce Marketplace Arbitrage</h3>
+            <span class="badge badge-active">Built / Research Open</span>
+          </div>
+          <p>An autonomous sourcing decision agent that returns BUY, PASS, or ESCALATE for marketplace arbitrage: deterministic margin math, Gemini risk scoring, and a human checkpoint on high-capital buys. Matched 10/10 evaluation scenarios; the research write-up is the open task on the loop.</p>
+          <div class="card-tech">
+            <span>Google ADK 2.0</span><span>MCP</span><span>Gemini</span><span>HITL escalation</span><span>STRIDE threat model</span>
+          </div>
+          <a class="card-link" href="https://github.com/SturdivantAI/ecommerce-marketplace-arbitrage">GITHUB / ecommerce-marketplace-arbitrage</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section id="publications" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">03</span> / PUBLICATIONS</span><span>LIVING LIST</span></div>
+      <h2>Paper pipeline</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-title">SaMD V&amp;V transferability taxonomy</span>
+          <span class="badge badge-active">In Progress</span>
+          <span class="pub-note">Verification and Validation transferability for Software as a Medical Device (SaMD). Target: IEEE pipeline.</span>
+        </li>
+        <li>
+          <span class="pub-title">MRL Shared Task submission</span>
+          <span class="badge badge-dev">In Preparation</span>
+          <span class="pub-note">Multilingual Representation Learning shared task entry.</span>
+        </li>
+        <li>
+          <span class="pub-title">Parameter Golf Sprint 002: untied embeddings ablation study</span>
+          <span class="badge badge-dev">In Preparation</span>
+          <span class="pub-note">N=27 controlled-budget ablation matrix; methods paper drafted. Target venue: PENDING.</span>
+        </li>
+      </ul>
+      <p class="pubs-caption">The lab targets one paper per quarter. A slipped quarter publishes the negative result or the evaluation methodology as a technical report instead.</p>
+    </section>
+
+    <!-- ================= CAPABILITIES ================= -->
+    <section id="capabilities" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">04</span> / CAPABILITIES</span><span>RESEARCH CAPABILITIES</span></div>
+      <h2>What the lab does</h2>
+      <div class="caps">
+        <div class="cap">
+          <h3>Agentic systems</h3>
+          <p>Multi-agent engines and orchestrators with typed state, write-ahead journaling, and judge-gated transitions. Not conversational layers over a hosted API.</p>
+        </div>
+        <div class="cap">
+          <h3>LLM evaluation</h3>
+          <p>LLM-as-a-Judge harnesses and V&amp;V gates that score releases against defined rubrics before anything ships.</p>
+        </div>
+        <div class="cap">
+          <h3>Model compression</h3>
+          <p>Quantization-aware training, distillation, and precision engineering. The optimization target: minimum bits, preserved reasoning.</p>
+        </div>
+        <div class="cap">
+          <h3>Cloud AI engineering</h3>
+          <p>Production systems on AWS Bedrock and Vertex AI, designed for recovery under real network conditions rather than demo conditions.</p>
+        </div>
+        <div class="cap">
+          <h3>Regulatory AI</h3>
+          <p>Software as a Medical Device (SaMD) verification and validation, and evaluation evidence built to survive an audit. Working frameworks:</p>
+          <div class="card-tech" style="margin-top: 12px">
+            <span>FDA</span><span>IMDRF</span><span>PCCP</span><span>GMLP</span><span>ISO 13485</span><span>ISO 14971</span><span>NIST AI RMF</span><span>GDPR</span><span>FedRAMP</span>
+          </div>
+        </div>
+        <div class="cap">
+          <h3>AI security &amp; governance</h3>
+          <p>Threat modeling and red-team evaluation for agentic systems, with governance audits run by multi-agent review panels. Working frameworks:</p>
+          <div class="card-tech" style="margin-top: 12px">
+            <span>OWASP Top 10</span><span>OWASP LLM Top 10</span><span>NIST AI RMF</span><span>MITRE ATLAS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WRITING ================= -->
+    <section id="writing" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">05</span> / WRITING</span><span>FIELD NOTES</span></div>
+      <h2>Parsimony</h2>
+      <div class="writing-card">
+        <p class="mono" style="margin-bottom: 12px">A STURDIVANTAI LAB PUBLICATION</p>
+        <p>
+          Research papers, broken down for readers short on time: what the authors claim, what
+          the math and code say, where the gaps are, and a verdict. Built for people priced out
+          of the literature by volume, jargon, or notation.
+        </p>
+        <p style="margin-top: 12px">
+          Parsimony is also the lab's blog: field notes from our own builds, negative results
+          included, published on the same feed as the paper breakdowns.
+        </p>
+        <p style="margin-top: 16px">
+          <a class="mono" href="#contact">SUBSCRIBE / PENDING (Beehiiv link)</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MEDIA ================= -->
+    <section id="media" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">06</span> / MEDIA</span><span>DEMOS &amp; FOOTAGE</span></div>
+      <h2>See it running</h2>
+      <div class="media-grid">
+
+        <figure class="media-card">
+          <iframe src="https://www.youtube-nocookie.com/embed/UnuaGz-SQjw" title="SturdivantAI Lab 15-second teaser" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          <figcaption><span class="mono">TEASER / 15S</span>SturdivantAI Lab, in motion.</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <a href="https://youtu.be/uVa6_lsoFNA" aria-label="Watch the GhostWrench demo on YouTube">
+            <span class="thumb-wrap">
+              <img src="https://i.ytimg.com/vi/uVa6_lsoFNA/hqdefault.jpg" alt="GhostWrench demo video thumbnail" loading="lazy">
+              <svg class="play-badge" viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" fill="#14170B" fill-opacity="0.75" stroke="#8BD920" stroke-width="2"/>
+                <path d="M25 18 L25 46 L49 32 z" fill="#8BD920"/>
+              </svg>
+            </span>
+          </a>
+          <figcaption><span class="mono">DEMO / VIDEO</span>GhostWrench, the safety-first field engineer agent on Amazon Nova. Recorded demo, on YouTube.</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <a href="https://youtu.be/0yjnugojFk8" aria-label="Watch the marketplace arbitrage agent demo on YouTube">
+            <span class="thumb-wrap">
+              <img src="https://i.ytimg.com/vi/0yjnugojFk8/hqdefault.jpg" alt="Marketplace arbitrage agent demo video thumbnail" loading="lazy">
+              <svg class="play-badge" viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" fill="#14170B" fill-opacity="0.75" stroke="#8BD920" stroke-width="2"/>
+                <path d="M25 18 L25 46 L49 32 z" fill="#8BD920"/>
+              </svg>
+            </span>
+          </a>
+          <figcaption><span class="mono">DEMO / VIDEO</span>The sourcing decision agent returning BUY, PASS, or ESCALATE. Recorded run, on YouTube.</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img src="assets/pg-ablation.svg" alt="Measured ablation chart: change in validation bits per byte versus baseline across eight configurations; untied embeddings is the best result at minus 0.0187" loading="lazy">
+          <figcaption><span class="mono">RESEARCH / MEASURED</span>Parameter Golf Sprint 002, N=27: untying token embeddings beat the tied baseline by 0.0187 BPB, over 15&#215; the seed noise floor, for 0.26 MB. <a href="https://github.com/edidiongumoh/parameter-golf">Data in the repo</a>.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="wrap reveal">
+      <div class="ledger-index"><span><span class="idx">07</span> / CONTACT</span><span>NO FLUFF</span></div>
+      <h2>Connect</h2>
+      <div class="contact-grid">
+        <ul class="contact-list">
+          <li><span class="mono">Email</span><a class="mono" href="#contact">PENDING / lab email</a></li>
+          <li><span class="mono">GitHub</span><a class="mono" href="https://github.com/edidiongumoh" rel="me">github.com/edidiongumoh</a></li>
+          <li><span class="mono">ORCID</span><a class="mono" href="https://orcid.org/0009-0005-4633-9901" rel="me">0009-0005-4633-9901</a></li>
+          <li><span class="mono">LinkedIn</span><a class="mono" href="https://www.linkedin.com/in/edidiong-hector-umoh" rel="me">in/edidiong-hector-umoh</a></li>
+          <li><span class="mono">LinkedIn (Lab)</span><a class="mono" href="https://www.linkedin.com/company/sturdivantai-lab">company/sturdivantai-lab</a></li>
+          <li><span class="mono">X</span><span class="mono badge badge-pending">PENDING HANDLE</span></li>
+          <li><span class="mono">YouTube</span><span class="mono badge badge-pending">PENDING CHANNEL URL</span></li>
+        </ul>
+
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mykrgeqn" method="POST">
+          <!-- Honeypot: bots fill it, humans never see it; Formspree drops any submission carrying it -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" rows="5" required></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="form-status mono" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap footer-inner">
+      <span class="mono">© <span id="year">2026</span> STURDIVANTAI LAB</span>
+      <span class="mono">FINDINGS BECOME PROTOTYPES. PROTOTYPES BECOME FINDINGS.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">&#8593; TOP</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

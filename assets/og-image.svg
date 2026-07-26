@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9EE022"/>
+      <stop offset="1" stop-color="#4FB31E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#191C21"/>
+  <rect x="60" y="60" width="1080" height="510" fill="none" stroke="#EDEFF2" stroke-opacity="0.12"/>
+  <text x="100" y="150" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="3" fill="#9BA1AA">STURDIVANTAI LAB / INDEPENDENT APPLIED AI RESEARCH</text>
+  <text x="100" y="290" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700" fill="#EDEFF2">Findings become prototypes.</text>
+  <text x="100" y="380" font-family="Space Grotesk, sans-serif" font-size="72" font-weight="700" fill="#8BD920">Prototypes become findings.</text>
+  <circle cx="130" cy="490" r="30" fill="#22262D"/>
+  <path d="M140 477.6c-11.6-6-22-2.4-22 4 0 8 23.6 5.6 23.6 14 0 6.4-10.4 10-22 4" fill="none" stroke="url(#sg)" stroke-width="5.6" stroke-linecap="round"/>
+  <circle cx="140" cy="477.6" r="3.6" fill="#D6F58F"/>
+</svg>
