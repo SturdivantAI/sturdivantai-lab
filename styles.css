@@ -71,24 +71,52 @@ body {
 
 /* Field-equation background: fixed layer behind all content.
    body::before is taken by the blueprint hairlines; ::after is free. */
-body::after {
- content: '';
+body::after {content: '';
   position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url('assets/bg-field.jpg');
-  background-image: image-set(
-    url('assets/bg-field.webp') type('image/webp'),
-    url('assets/bg-field.jpg') type('image/jpeg'));
-  background-size: cover;
+  inset: -20px;
+  z-index: -2;
+  background-image: url('assets/bg-field.webp');
+  background-size: 110%;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.22;
-  filter: brightness(1.15) contrast(1.2) saturate(1.15);
-  animation: bg-drift 16s ease-in-out infinite alternate;
+  opacity: 0.30;
+  animation: bg-drift 12s ease-in-out infinite alternate;
+  will-change: transform;
+  transform-origin: center center;
 }
+
+@keyframes bg-drift {
+  0%   { transform: scale(1.0) translate(0px, 0px); }
+  25%  { transform: scale(1.03) translate(-12px, 8px); }
+  50%  { transform: scale(1.05) translate(10px, -10px); }
+  75%  { transform: scale(1.03) translate(-8px, 12px); }
+  100% { transform: scale(1.0) translate(12px, -8px); }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+Key changes from before:
+
+inset: -20px — overflows the viewport slightly so drift motion never shows edges
+background-size: 110% — stops the image from being stretched too thin, preserves sharpness
+opacity: 0.30 — more visible
+12s — noticeably animated without being distracting
+Larger translate values (12px vs 6px) — motion is actually perceptible
+.webp instead of .jpg — sharper rendering
+Save, commit, push:
+
+bash
+git add styles.css
+git commit -m "fix(ui): sharpen background image and fix drift animation visibility"
+git push origin main
+Check the live site in 60 seconds and tell me what you see.
+
+
+
+
 @keyframes bg-drift {
   0%   { transform: scale(1.04) translate(0px, 0px); }
   25%  { transform: scale(1.05) translate(-6px, 4px); }
