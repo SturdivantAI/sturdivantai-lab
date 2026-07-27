@@ -74,7 +74,7 @@ body {
 body::after {content: '';
   position: fixed;
   inset: -20px;
-  z-index: -2;
+  z-index: -1;  /* was -2 */;
   background-image: url('assets/bg-field.webp');
   background-size: 110%;
   background-position: center center;
@@ -133,12 +133,10 @@ Check the live site in 60 seconds and tell me what you see.
 
 .wrap {
   max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 var(--s-4);
   position: relative;
-  z-index: 1;
+  /* remove z-index: 1; entirely */
+  margin: 0px auto;
 }
-
 h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spacing: -0.01em; }
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
