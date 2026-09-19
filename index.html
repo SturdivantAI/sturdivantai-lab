@@ -172,8 +172,20 @@
     <!-- ================= RESEARCH ================= -->
     <section id="research" class="wrap reveal">
       <div class="ledger-index"><span><span class="idx">02</span> / RESEARCH</span><span>ACTIVE PROJECTS</span></div>
-      <h2>Seven systems, one loop.</h2>
+      <h2>Eight systems, one loop.</h2>
       <div class="cards">
+
+        <article class="card">
+          <div class="card-head">
+            <h3>Cockroach Distributed AIOps</h3>
+            <span class="badge badge-dev">Complete</span>
+          </div>
+          <p>An SRE incident-response agent with persistent memory. CockroachDB spans three AWS regions, so the agent diagnoses a repeat incident against everything it learned the first time, and an LLM-as-judge scores whether the second response was measurably better.</p>
+          <div class="card-tech">
+            <span>CockroachDB</span><span>AWS Bedrock</span><span>Step Functions</span><span>Databricks</span>
+          </div>
+          <a class="card-link" href="https://github.com/SturdivantAI/Cockroach-BD_Dist-AIOps">GITHUB / Cockroach-BD_Dist-AIOps</a>
+        </article>
 
         <article class="card">
           <div class="card-head">
@@ -268,6 +280,11 @@
       <h2>Paper pipeline</h2>
       <ul class="pubs">
         <li>
+          <span class="pub-title">Who Verifies the Verifier?</span>
+          <span class="badge badge-active">Presented</span>
+          <span class="pub-note">Measuring LLM-as-judge reliability across 32,688 claim-level verdicts from the 2026 ICML Agent Reproduction Challenge. One judge model disagreed with itself on 70.1 percent of the claims it read more than once; holding the evidence byte-identical put the floor at 8.41 percent. Presented at the AWS-MLU AI Teaching &amp; Research Symposium, Amazon HQ2, September 22, 2026. <a href="/papers/who-verifies-the-verifier-poster.pdf">Poster (PDF)</a> &middot; <a href="https://github.com/SturdivantAI/who-verifies-the-verifier">Analysis, figures and derived data</a>. Preprint in preparation.</span>
+        </li>
+        <li>
           <span class="pub-title">SaMD V&amp;V transferability taxonomy</span>
           <span class="badge badge-active">In Progress</span>
           <span class="pub-note">Verification and Validation transferability for Software as a Medical Device (SaMD). Target: IEEE pipeline.</span>
@@ -283,7 +300,7 @@
           <span class="pub-note">N=27 controlled-budget ablation matrix; methods paper drafted. Target venue: PENDING.</span>
         </li>
       </ul>
-      <p class="pubs-caption">The lab targets one paper per quarter. A slipped quarter publishes the negative result or the evaluation methodology as a technical report instead.</p>
+      <p class="pubs-caption">Nine further papers are spined and queued; two more emerged from the reproducibility work in September 2026. The lab targets one paper per quarter. A slipped quarter publishes the negative result or the evaluation methodology as a technical report instead.</p>
     </section>
 
     <!-- ================= CAPABILITIES ================= -->
